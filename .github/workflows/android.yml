@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: checkout code
@@ -28,7 +28,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y build-essential ccache git libffi-dev libssl-dev xclip libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev libswscale-dev libavformat-dev libavcodec-dev zlib1g-dev
-        sudo apt-get install -y libgstreamer1.0-gstreamer-lite1.0-dev libgstreamer-plugins-base1.0-dev autoconf automake libtool pkg-config cmake modules-dev libasound2-dev libjack-dev
+        sudo apt-get install -y libgstreamer1.0-dev gstreamer1.0-plugins-base autoconf automake libtool pkg-config cmake libasound2-dev libjack-dev
         pip install --upgrade pip
         pip install "cython<3.0.0" virtualenv buildozer
 
